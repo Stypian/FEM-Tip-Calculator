@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="scripts.js"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <main class="tip-calc__main">
+    <form class="tip-calc__cont">
+      <h1 class="tip-calc__h1">SPLI<br>TTER</h1>
+      <div class="tip-calc__calc-cont">
+        <div class="tip-calc__calc-inner">
+          <div class="tip-calc__calc-left">
+            <div class="tip-calc__left-bill">
+              <div class="tip-calc__label-error-wrap">
+                <label for="tip-calc__bill" class="tip-calc__label">Bill</label>
+                <label class="tip-calc__label tip-calc__label--error">Can't be zero</label>
+              </div>
+              <div class="tip-calc__input-wrap">
+                <img class="tip-calc__placeholder-img tip-calc__placeholder--left" src="images/icon-dollar.svg" alt="bill amount">
+                <p class="tip-calc__placeholder tip-calc__placeholder--right">0</p>
+                <input type="number" class="tip-calc__input" id="tip-calc__bill" name="tip-calc__bill">
+              </div>
+            </div>
+            <div class="tip-calc__left-select">
+              <p class="tip-calc__label">Select Tip %</p>
+              <div class="tip-calc__select-buttons">
+                <div class="tip-calc__select-row">
+                  <button class="tip-calc__select-button">5</button>
+                  <button class="tip-calc__select-button">10</button>
+                  <button class="tip-calc__select-button">15</button>
+                </div>
+                <div class="tip-calc__select-row">
+                  <button class="tip-calc__select-button">25</button>
+                  <button class="tip-calc__select-button">50</button>
+                  <div class="tip-calc__custom-button-wrap">
+                    <input type="number" class="tip-calc__select-button tip-calc__custom-button" placeholder="Custom">
+                  </div>
+                </div>
+              </div>
+              <div class="tip-calc__select-buttons-mobile">
+                <div class="tip-calc__select-row">
+                  <button class="tip-calc__select-button">5</button>
+                  <button class="tip-calc__select-button">10</button>
+                </div>
+                <div class="tip-calc__select-row">
+                  <button class="tip-calc__select-button">15</button>
+                  <button class="tip-calc__select-button">25</button>
+                </div>
+                <div class="tip-calc__select-row">
+                  <button class="tip-calc__select-button">50</button>
+                  <div class="tip-calc__custom-button-wrap">
+                    <input type="number" class="tip-calc__select-button tip-calc__custom-button" placeholder="Custom">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tip-calc__left-number">
+              <div class="tip-calc__label-error-wrap">
+                <label for="tip-calc__people" class="tip-calc__label">Number of People</label>
+                <label class="tip-calc__label tip-calc__label--error">Can't be zero</label>
+              </div>
+              <div class="tip-calc__input-wrap">
+                <img class="tip-calc__placeholder-img tip-calc__placeholder--left" src="images/icon-person.svg" alt="number of people">
+                <p class="tip-calc__placeholder tip-calc__placeholder--right">0</p>
+                <input type="number" class="tip-calc__input" id="tip-calc__people" name="tip-calc__people">
+              </div>
+            </div>
+          </div>
+            <div class="tip-calc__calc-right">
+              <div class="tip-calc__right-inner">
+                <div class="tip-calc__right-amount">
+                  <div class="tip-calc__amount-left">
+                    <h3 class="tip-calc__right-h3">Tip Amount</h3>
+                    <p class="tip-calc__right-p">/ person</p>
+                  </div>
+                  <div class="tip-calc__amount-right">
+                    <h2 class="tip-calc__right-h2">0.00</h2>
+                  </div>
+                </div>
+                <div class="tip-calc__right-total">
+                  <div class="tip-calc__total-left">
+                    <h3 class="tip-calc__right-h3">Total</h3>
+                    <p class="tip-calc__right-p">/ person</p>
+                  </div>
+                  <div class="tip-calc__total-right">
+                    <h2 class="tip-calc__right-h2">0.00</h2>
+                  </div>
+                </div>
+                <div class="tip-calc__reset-cont">
+                  <button class="tip-calc__reset-button">RESET</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">RonL</a>.
+  </div>
+</body>
+</html>
