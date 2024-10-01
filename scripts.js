@@ -148,6 +148,34 @@ onload = function() {
                         reset.classList.add("tip-calc__reset-active");
                     }
                 })
+
+                percentButton[11].addEventListener("input", function() {
+                    if (input[1].value.length > 0 && input[0].value.length > 0) {
+                        let amountNum = input[0].value * (percentButton[11].value / 100);
+                        amountNum = amountNum / input[1].value;
+                        amounts[0].innerHTML = limitToTwoDecimals(amountNum);
+                        let totTip = amountNum * input[1].value;
+                        let totAmount = parseFloat(input[0].value);
+                        let billTot = totTip + totAmount;
+                        reset.classList.add("tip-calc__reset-active");
+                        billTot = billTot / input[1].value;
+                        amounts[1].innerHTML = billTot.toFixed(2);
+                    }
+                })
+
+                percentButton[11].addEventListener("click", function() {
+                    if (input[1].value.length > 0 && input[0].value.length > 0 && percentButton[11].value.length > 0) {
+                        let amountNum = input[0].value * (percentButton[11].value / 100);
+                        amountNum = amountNum / input[1].value;
+                        amounts[0].innerHTML = limitToTwoDecimals(amountNum);
+                        let totTip = amountNum * input[1].value;
+                        let totAmount = parseFloat(input[0].value);
+                        let billTot = totTip + totAmount;
+                        billTot = billTot / input[1].value;
+                        amounts[1].innerHTML = billTot.toFixed(2);
+                        reset.classList.add("tip-calc__reset-active");
+                    }
+                })
         }
 
         setCustomPercentage();
